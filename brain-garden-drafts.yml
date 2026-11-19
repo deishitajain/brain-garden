@@ -1,0 +1,28 @@
+name: Brain Garden draft ideas
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '30 3 * * 1' # Monday 09:00 India time
+permissions:
+  contents: read
+jobs:
+  prepare-draft:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Generate a sourced draft for review
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          OPENAI_MODEL: ${{ vars.OPENAI_MODEL }}
+        run: python scripts/generate_draft.py
+      - name: Save draft for review
+        uses: actions/upload-artifact@v4
+        with:
+          name: brain-garden-draft
+          path: drafts/*.json
+          if-no-files-found: error
+          retention-days: 30
