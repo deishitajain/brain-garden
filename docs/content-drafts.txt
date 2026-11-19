@@ -1,0 +1,14 @@
+BRAIN GARDEN: DRAFT GENERATION OVERLAY
+
+This adds a weekly draft generator; it does not publish content. Requires the content-pack version of Brain Garden. Keep the existing index.html and content.js. Copy .github/workflows/brain-garden-drafts.yml and scripts/generate_draft.py into the matching paths in the existing repository. The dot-prefixed .github folder may be hidden in file managers.
+
+1. In your repository, open Settings > Secrets and variables > Actions. Add OPENAI_API_KEY as a repository secret. Never paste the key into source code, a website, or chat.
+2. In the Variables tab, create OPENAI_MODEL with a web-search-capable Responses API model available to your API account.
+3. In Actions, select Brain Garden draft ideas and run it manually once. A successful run has a downloadable brain-garden-draft artifact. Only then rely on the weekly Monday schedule; scheduled runs can be delayed.
+4. Download and unzip the artifact. In Brain Garden, Garden > Preview a content pack, select the JSON file. Read all explanations and check each source and factual claim before adding. A valid citation link alone does not establish truth.
+
+Packs added in the website are saved only in that browser and in its backup. They are NOT published to other visitors. Publishing reviewed material to the shared site requires a separate workflow and code change.
+
+The workflow can incur API charges. ChatGPT subscription access does not automatically provide API billing. Configure spending limits for the API project before enabling the schedule. To stop the schedule, disable the workflow in GitHub Actions. Manual runs also incur usage costs. If API access, billing or web search is unavailable the job fails without saving a draft; errors appear in the Actions log. Avoid exposing secrets in screenshots/logs.
+
+This is an integration-ready draft; it was tested with simulated API responses, not with a live API key or GitHub repository.
