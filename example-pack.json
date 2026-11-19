@@ -1,0 +1,30 @@
+{
+  "format": "brain-garden-content-pack",
+  "version": 1,
+  "title": "A closer look at risk and trust",
+  "ideas": [
+    {
+      "id": "asset_allocation_intro",
+      "title": "Why does your timeline change your choices?",
+      "domain": "Finance",
+      "hook": "Why might the same investment be reasonable for one goal and unsuitable for another?",
+      "body": "Asset allocation is how investments are spread among categories such as stocks, bonds and cash. A person's time horizon and willingness to bear risk can influence the mix they choose. Diversification may reduce risk, but it cannot guarantee against loss.",
+      "bridge": "A decision can only be judged in the context of the goal it serves.",
+      "example": "Imagine one person needs money for a fee next month, while another is saving for a goal many years away. Their ability to wait through fluctuations is different, even if they are looking at the same investment.",
+      "related": ["Risk", "Time horizon", "Diversification"],
+      "sources": ["https://www.investor.gov/introduction-investing/getting-started/asset-allocation"]
+    },
+    {
+      "id": "phishing_verification_intro",
+      "title": "Why does urgency make a message dangerous?",
+      "domain": "Cybersecurity",
+      "hook": "What if a message tries to make you act before you have time to think?",
+      "body": "Phishing messages can use urgency or impersonation to pressure someone into clicking a link or sharing information. If a request seems suspicious, use a known independent channel to verify it, and follow the reporting process available to you.",
+      "bridge": "A secure decision often begins with checking where a request came from.",
+      "example": "Imagine an unexpected message says your account will close in an hour. Rather than use its link, you could open the service using an address you already know and check there.",
+      "related": ["Trust", "Verification", "Security"],
+      "sources": ["https://www.cisa.gov/sites/default/files/2024-09/Secure-Our-World-Phishing-Tip-Sheet.pdf"]
+    }
+  ],
+  "paths": []
+}
